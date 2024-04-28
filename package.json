@@ -1,0 +1,50 @@
+{
+  "name": "@wrapped-naira/wara",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "lint": "biome format --write .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.4",
+    "@szhsin/react-menu": "^4.1.0",
+    "@tanstack/react-query": "^5.28.14",
+    "@tanstack/react-table": "^8.15.3",
+    "@web3modal/siwe": "^4.1.5",
+    "@web3modal/wagmi": "^4.1.5",
+    "add": "^2.0.6",
+    "axios": "^1.6.8",
+    "dayjs": "^1.11.10",
+    "ethereum-blockies-base64": "^1.0.2",
+    "lucide-react": "^0.364.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-jazzicon": "^1.0.4",
+    "react-modal": "^3.16.1",
+    "react-paystack": "^5.0.0",
+    "react-router-dom": "^6.22.3",
+    "react-spinners": "^0.13.8",
+    "sass": "^1.74.1",
+    "viem": "^2.9.9",
+    "wagmi": "^2.5.18",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.1.2",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-modal": "^3.16.3",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@wagmi/cli": "latest",
+    "buffer": "^6.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-pwa": "^0.19.7"
+  }
+}

@@ -1,0 +1,77 @@
+.c-button {
+  @include flex(row);
+  gap: 16px;
+  flex: none;
+  // min-height: 40px;
+  color: $white;
+  line-height: 1;
+  cursor: pointer;
+  min-width: 84px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px 20px;
+  border: $border-1;
+  // background: $white;
+  width: max-content;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: all 0.15s ease-in-out !important;
+
+  color: $primary;
+  border-color: $black;
+  background: $neutral-100;
+
+  &--border {
+    color: $primary;
+    padding: 10px 16px;
+    background: transparent;
+    // border: 1px solid $primary;
+
+    color: $white;
+    background: #222;
+  }
+
+  &--rounded {
+    border-radius: 24px;
+  }
+}
+
+.c-spinner {
+  right: 10px;
+  display: flex;
+  position: absolute;
+}
+
+.c-toggle-btns {
+  @include flex(row);
+  gap: 6px;
+  padding: 3px;
+  border-radius: 8px;
+  background: $neutral-100;
+
+  &__btn {
+    @include flex(row);
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px 26px;
+    border-radius: 6px;
+
+    &:hover {
+      background: $neutral-80;
+    }
+
+    &[data-active="true"] {
+      background: $background;
+      &:hover {
+        background: $background;
+      }
+    }
+  }
+
+  &.full {
+    width: 100%;
+    .c-toggle-btns__btn {
+      flex: 1;
+    }
+  }
+}

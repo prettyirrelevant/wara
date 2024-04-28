@@ -1,0 +1,122 @@
+.sidebar {
+  top: 0;
+  left: 0;
+  flex: none;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+  width: $sidebar-w;
+  padding: 20px 16px 20px;
+  padding: 20px;
+  flex-direction: column;
+  border-right: $border-1;
+
+  &__logo {
+    gap: 4px;
+    display: flex;
+    color: $primary;
+    padding-left: 10px;
+    align-items: center;
+    margin-bottom: 36px;
+
+    .logo-icon {
+      @include flex(row);
+      width: 25px;
+      color: $primary;
+      padding-top: 2px;
+      line-height: 1 !important;
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+  }
+
+  &__menu {
+    flex: 1;
+    flex-direction: column;
+
+    ul {
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      li {
+        position: relative;
+        a {
+          @include flex(row, flex-start, center);
+          gap: 16px;
+
+          font-size: 16px;
+          padding: 8px 20px;
+          border-radius: 12px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          padding: 10px 24px 10px 12px;
+          p {
+            line-height: 1;
+            margin-top: 1px;
+          }
+          &:hover:not(.sidebar__menu-item--active) {
+            color: $primary;
+            p {
+              color: $primary;
+            }
+          }
+        }
+
+        .sidebar__menu-item {
+          &--active {
+            color: $primary;
+            background-color: rgba($color: $primary, $alpha: 0.08);
+          }
+        }
+      }
+    }
+    &-header {
+      color: #555;
+      font-size: 15px;
+      margin-top: 6px;
+      padding: 10px 12px 10px;
+    }
+
+    .theme-switch {
+      @include flex(row, space-between, center);
+
+      margin-top: 6px;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 10px 24px 10px 12px;
+      .label {
+        gap: 16px;
+        @include flex(row, flex-start, center);
+      }
+      p {
+        line-height: 1;
+      }
+      button {
+        @include flex(row);
+      }
+    }
+  }
+
+  &__footer {
+    gap: 10px;
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      width: 100%;
+      gap: 6px;
+    }
+  }
+}

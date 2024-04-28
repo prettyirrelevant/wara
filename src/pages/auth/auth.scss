@@ -1,0 +1,22 @@
+.auth {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  // position: sticky;
+  padding: 8vh min(5vw, 30px);
+  @include flex_col();
+
+  &__text {
+    // height: 100vh;
+    @include flex(center, center);
+
+    h2 {
+      // opacity: 0;
+      font-size: toRem(21);
+      font-size: 21vw;
+      line-height: 80%;
+      // text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

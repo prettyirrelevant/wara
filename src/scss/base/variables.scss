@@ -1,0 +1,61 @@
+$grey: #999;
+$white: #ddd;
+$white-pure: #fff;
+$black: #000010;
+// $background: #f3f2ec;
+$background: #111;
+
+// $primary: #3358d3;
+$primary: #bfea88;
+$secondary: #cfdddb;
+// $background: #fcfaf2;
+
+// $preview-bg: #e4e5df;
+$preview-bg: #efefef;
+
+$buy-color: #0ecb81;
+$sell-color: #ca3f64;
+
+$neutral-50: #080808;
+$neutral-80: #1a1a1a;
+$neutral-90: #1d1d1d;
+$neutral-100: #242424;
+$neutral-150: #2a2a2a;
+$neutral-200: #333;
+$neutral-250: #2d2d2d;
+$neutral-300: #444;
+$neutral-600: #666;
+$neutral-700: #777;
+$neutral-900: #999;
+
+$border-0: 1px solid #000;
+$border-1: 1px solid #222;
+$border-2: 1px solid #aaa;
+
+// dimensions
+$base-font: 15;
+$modal-width: 480px;
+$navbar-height: 50px;
+
+$topbar-h: 64px;
+$sidebar-w: 270px;
+$page-content-w: 930px;
+$page-sidebar-w: 310px;
+$content-w: calc(100% - #{$sidebar-w});
+
+$spacing: 1rem;
+$pad_hor: min(5vw, 20px);
+
+// fonts
+$sans: Uncut, sans-serif;
+
+// z-indexes
+$z-indexes: (
+  "preloader",
+  "loader",
+  "modal",
+  "overlay",
+  "navbar",
+  "menu",
+  "content"
+);

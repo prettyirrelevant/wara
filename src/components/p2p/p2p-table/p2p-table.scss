@@ -1,0 +1,81 @@
+.p2p-table {
+  flex: 1;
+  width: 100%;
+  @include flex_col(40px);
+
+  table {
+    width: 100%;
+    font-size: 16px;
+    border-collapse: collapse;
+
+    th {
+      padding: 10px;
+      padding-left: 0px;
+      text-align: start;
+      color: $neutral-600;
+
+      &:last-child {
+        text-align: end;
+        padding-left: 10px;
+      }
+
+      &:last-child {
+        width: 130px;
+      }
+    }
+
+    tbody {
+      border-top: 1px solid $neutral-100;
+      tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid $neutral-100;
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          padding: 16px 4px;
+        }
+      }
+    }
+
+    .wallet-block {
+      @include flex(row, flex-start);
+      img {
+        width: 24px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .trade-btn__container {
+      @include flex(row, flex-end);
+      .trade-btn {
+        @include flex(row);
+        gap: 6px;
+        color: $black;
+        min-width: 100px;
+        cursor: pointer;
+        padding: 7px 10px;
+        border-radius: 6px;
+
+        &[data-adtype="buy"] {
+          background: $buy-color;
+        }
+        &[data-adtype="sold-out"] {
+          background: #ffd772;
+          cursor: not-allowed;
+          opacity: 0.7;
+        }
+        &[data-adtype="sell"] {
+          color: $white-pure;
+          background: $sell-color;
+        }
+      }
+    }
+  }
+}

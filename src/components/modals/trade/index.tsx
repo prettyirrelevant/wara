@@ -1,5 +1,6 @@
 import "./trade.scss";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { ClipLoader } from "react-spinners";
 import { Swap } from "@phosphor-icons/react";
 
@@ -70,11 +71,11 @@ const TradeAdModal = () => {
       }
 
       await refetchData();
-
-      alert("Transaction processing ...");
+      toast.success(`Order executed successfully.`);
       closeModal();
     } catch (e) {
       console.log(e);
+      toast.error(`Unable to execute ad due to: ${JSON.stringify(e).substring(0, 100)}...`);
     } finally {
       setLoading(false);
     }

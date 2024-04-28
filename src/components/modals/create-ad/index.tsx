@@ -1,5 +1,6 @@
 import "./create-ad.scss";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import useAppMenu from "hooks/useMenu";
 import { ClipLoader } from "react-spinners";
 import { CaretDown, Plus } from "@phosphor-icons/react";
@@ -18,7 +19,6 @@ const CreateAdModal = () => {
   const [adtype, setAdtype] = useState("buy");
 
   const [loading, setLoading] = useState(false);
-
   const [TokenMenu, selectedToken] = useAppMenu("usdc", ["usdt", "usdc"], () => {}, true, true);
 
   // Generate a savings contract from the factory
@@ -72,11 +72,11 @@ const CreateAdModal = () => {
       }
 
       await refetchData();
-
-      alert("Advert created. Transaction processing ...");
+      toast.success(`${adtype.toUpperCase()} advert created successfully.`);
       closeModal();
     } catch (e) {
       console.log(e);
+      toast.error(`Unable to create ad due to: ${JSON.stringify(e).substring(0, 100)}...`);
     } finally {
       setLoading(false);
     }

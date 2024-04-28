@@ -1,4 +1,5 @@
 import "./p2p.scss";
+
 import useAppMenu from "hooks/useMenu";
 import P2PTable from "components/p2p/p2p-table";
 import { ArrowsClockwise, Plus, StackPlus } from "@phosphor-icons/react";

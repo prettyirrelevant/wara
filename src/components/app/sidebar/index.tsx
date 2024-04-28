@@ -34,7 +34,7 @@ const navlinks = {
       icon: <ArrowFatLineUp size={iconSize} className="sidebar__menu-item-icon" />,
     },
     {
-      name: "History",
+      name: "History (not ready)",
       link: "/history",
       icon: <CalendarDots size={iconSize} className="sidebar__menu-item-icon" />,
     },
